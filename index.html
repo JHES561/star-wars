@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Academia Jedi</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -26,7 +29,7 @@
             <input type="text" placeholder="Introduce tu nombre aquí">
 
             <label>Especie</label>
-            <select>
+            <select class="Especie">
                 <option>Humano</option>
                 <option>Twi'lek</option>
                 <option>Zabrak</option>
@@ -46,22 +49,23 @@
                 <button type="button">Medio</button>
                 <button type="button">Alto</button>
             </div>
-
+                <label>seleciona tu nivel</label>
             <label>Selección de Sables de Luz Preferidos</label>
             <div class="sables">
-                <label><input type="checkbox"> Azul</label>
-                <label><input type="checkbox"> Verde</label>
-                <label><input type="checkbox"> Morado</label>
-                <label><input type="checkbox"> Rojo</label>
-                <label><input type="checkbox"> Doble Hoja</label>
+                <label class="box"><input type="checkbox"> Azul</label>
+                <label class="box"><input type="checkbox"> Verde</label>
+                <label class="box"><input type="checkbox"> Morado</label>
+                <label class="box"><input type="checkbox"> Rojo</label>
+                <label class="box"><input type="checkbox"> Doble</label>
             </div>
+
 
             <label>Comentarios Adicionales</label>
             <textarea placeholder="Escribe tus comentarios aquí..."></textarea>
 
             <button class="enviar">Enviar solicitud al Consejo Jedi</button>
 
-            <p class="nota">Nota: Bienvenido a tu nuevo camino</p>
+            <p id="nota">Nota: Bienvenido a tu nuevo camino</p>
 
         </form>
     </div>
