@@ -19,14 +19,16 @@
             <img src="assets/logo-starwars.png" alt="Star Wars Logo" class="logo">
             <div class="header-text">
                 <h1>Academia Jedi</h1>
-                <p class="sub">¡Que la Fuerza te acompañe!</p>
+                <p class="sub">Que la Fuerza te acompañe!</p>
             </div>
         </div>
 
-        <form class="jedi-form">
+        <form>
+            <div class="subs">
+                <label>Nombre del Aprendiz</label>
+                <input type="text" placeholder="Introduce tu nombre aquí">
+            </div>
 
-            <label>Nombre del Aprendiz</label>
-            <input type="text" placeholder="Introduce tu nombre aquí">
 
             <label>Especie</label>
             <select class="Especie">
@@ -36,6 +38,7 @@
                 <option>Wookiee</option>
                 <option>Rodiano</option>
             </select>
+            <p class="especietext">Selecciona tu especie</p>
 
             <label>Edad</label>
             <input type="number" placeholder="Introduce tu edad">
@@ -49,14 +52,14 @@
                 <button type="button">Medio</button>
                 <button type="button">Alto</button>
             </div>
-                <label>seleciona tu nivel</label>
-            <label>Selección de Sables de Luz Preferidos</label>
+                <label class="fuerzatext">Seleciona tu nivel</label>
+            <label>Selección de Sables de Luz<br>Preferidos</label>
             <div class="sables">
-                <label class="box"><input type="checkbox"> Azul</label>
+                <label class="box"><input type="checkbox" class="check"> Azul</label>
                 <label class="box"><input type="checkbox"> Verde</label>
                 <label class="box"><input type="checkbox"> Morado</label>
                 <label class="box"><input type="checkbox"> Rojo</label>
-                <label class="box"><input type="checkbox"> Doble</label>
+                <label class="box"><input type="checkbox"> Doble hoja</label>
             </div>
 
 
@@ -64,8 +67,8 @@
             <textarea placeholder="Escribe tus comentarios aquí..."></textarea>
 
             <button class="enviar">Enviar solicitud al Consejo Jedi</button>
-
-            <p id="nota">Nota: Bienvenido a tu nuevo camino</p>
+            <p>Nota<br></p>
+            <p id="nota">Bienvenido a tu nuevo camino</p>
 
         </form>
     </div>

@@ -6,25 +6,28 @@
 }
 
 body {
-    background: gray;
+    background: rgb(189, 184, 184);
     background-image: url('../assets/fondopage.png');
-    color: #d5ffff;
+    color: #00F2FF;
     display: flex;
     justify-content: center;
     padding: 20px;
 }
 
 .container {
-    width: 350px;
-    background: #2b2a2a;
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+    background-color: rgba(10, 10, 10, 0.85);
+    border-radius: 18px;
+    margin-bottom: 62px;
+    box-shadow: 0px 4px 4px 0px rgba(136, 204, 238, 0.5);
     padding: 20px;
-    border-radius: 12px;
-    border: 2px solid #00eaff;
 }
 
 .logo {
-    width: 80px;
-    height: 80px;
+    width: 56px;
+    height: 56px;
     border-radius: 50%;
     object-fit: cover;
 }
@@ -35,22 +38,26 @@ body {
     gap: 12px;
     margin-bottom: 20px;
 }
+
 .header-text h1 {
-    margin: 0;
-    font-size: 24px;
-    color: #00eaff;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0;
+    color: #00F2FF;
 }
 
 .sub {
     margin: 0;
     font-size: 14px;
     opacity: 0.8;
-    color: #a0eaff;
+    color: #00F2FF;
+    width: 500px;
 }
 
 label {
     font-size: 13px;
-    color: #8be9ff;
+    color: #00F2FF;
     margin: 8px 0 4px;
     display: block;
 }
@@ -58,7 +65,7 @@ label {
 input, select, textarea {
     width: 100%;
     padding: 10px;
-    background: #1b1b1b;
+    background: #0D0D0D;
     border: 1px solid #00eaff80;
     border-radius: 6px;
     color: #d5ffff;
@@ -67,7 +74,9 @@ input, select, textarea {
     font-size: 13px;
 }
 
-input:focus, select:focus, textarea:focus {
+input:focus,
+select:focus,
+textarea:focus {
     border-color: #00eaff;
     box-shadow: 0 0 6px #00eaff;
 }
@@ -75,84 +84,137 @@ input:focus, select:focus, textarea:focus {
 .nivel-fuerza {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
 }
 
 .nivel-fuerza button {
     flex: 1;
     margin: 0 3px;
     padding: 8px;
-    background: #111;
-    border: 1px solid #00eaff;
-    color: #9bfaff;
+    background: none;
+    border: 1px solid #111;
+    color: rgba(0, 242, 255, 0.7);
     border-radius: 6px;
     cursor: pointer;
     transition: 0.2s;
+    font-weight: 400;
 }
 
 .nivel-fuerza button:hover {
-    background: #00eaff30;
+    background: #111;
+}
+
+.fuerzatext {
+    color: rgba(0, 242, 255, 0.7);
+    margin-top: 1px;
+    margin-bottom: 25px;
+    font-size: 15px;
 }
 
 .sables {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* para dos columnas */
+    display: flex;
+    flex-wrap: wrap;
     gap: 15px;
     margin-top: 10px;
 }
 
 .sables .box {
+    width: calc(50% - 15px);
     display: flex;
     align-items: center;
     gap: 10px;
     padding: 15px;
-    background: rgba(255,255,255,0.06);
-    border: 2px solid #00eaff;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid #00F2FF;
     border-radius: 10px;
-    color: #00eaff;
+    color: #00F2FF;
     font-size: 1rem;
     cursor: pointer;
 }
 
+.sables .box:last-child {
+    width: 100%;
+}
 
-.sables label {
+.sables .box input[type="checkbox"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 4px solid #00F2FF;
+    border-radius: 3px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.sables .box input[type="checkbox"]:checked {
+    background-color: #00F2FF;
+    border: 1px solid rgba(0, 242, 255, 0.7);
+}
+
+.sables .box label {
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: 10px;
+    font-size: 1rem;
+    color: #00F2FF;
+    cursor: pointer;
 }
 
 textarea {
-    height: 70px;
+  display: flex; 
+  flex-direction: row;
+  width: 296px;          
+  height: 36px;        
+  border-radius: 6px;
+  border: 1px solid #0D0D0D;
+  padding: 8px 12px;
+  gap: 4px;
+  background-color: #0D0D0D; 
 }
+
 
 .enviar {
     width: 100%;
-    padding: 12px;
-    background: #000;
-    color: #00eaff;
-    border: none;
-    border-radius: 8px;
-    font-weight: bold;
-    cursor: pointer;
-    margin-top: 10px;
-    transition: 0.3s;
+  padding: 12px;
+  background: #000;
+  color: #00F2FF;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 1px;
+  transition: 0.3s;
+  margin-bottom: 30px;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0%;
 }
 
 .enviar:hover {
     background: #00bcd4;
-    box-shadow: 0 0 10px #00eaff;
+    box-shadow: 0 0 10px #00F2FF;
 }
 
 #nota {
-    color:#00eaff;
+    color: rgba(0, 242, 255, 0.7);
 }
-
+input{
+    background-color: #0D0D0D;
+}
 input::placeholder,
 textarea::placeholder {
-    color: #00eaff;
-    
+    color: rgba(0, 242, 255, 0.7);
+
 }
 
-.Especie{
-    color: #00eaff;
+.Especie {
+    color: rgba(0, 242, 255, 0.7);
+}
+
+.especietext {
+    color: #00F2FF;
+    margin-top: 1px;
+    margin-bottom: 20px;
 }
